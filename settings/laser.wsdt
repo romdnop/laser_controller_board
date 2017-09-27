@@ -83,7 +83,6 @@
           <SelStart2>84</SelStart2>
           <SelEnd2>84</SelEnd2>
         </Tab>
-        <ActiveTab>1</ActiveTab>
         <Tab>
           <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\User\src\gpio.c</Filename>
@@ -95,6 +94,31 @@
           <YPos2>0</YPos2>
           <SelStart2>53</SelStart2>
           <SelEnd2>53</SelEnd2>
+        </Tab>
+        <ActiveTab>2</ActiveTab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\StdPeriph\src\stm8s_gpio.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>215</YPos2>
+          <SelStart2>0</SelStart2>
+          <SelEnd2>0</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\StdPeriph\inc\stm8s_gpio.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>134</YPos2>
+          <SelStart2>0</SelStart2>
+          <SelEnd2>0</SelEnd2>
         </Tab>
       </Pane>
       <ActivePane>0</ActivePane>
