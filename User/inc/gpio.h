@@ -4,6 +4,7 @@
 #include "tim4.h"
 void HW_GPIO_Init(void);
 
-uint8_t saved_led_map = 0;
+
+extern uint8_t saved_led_map;
 
 #endif

@@ -1,6 +1,6 @@
 #include "main.h"
 
-
+KEY_TypeDefStruct keys;
 
 int main(void)
 {
@@ -9,12 +9,14 @@ int main(void)
 
   CLK_SYSCLKConfig(CLK_PRESCALER_CPUDIV1);
   CLK_SYSCLKConfig(CLK_PRESCALER_HSIDIV1); // set 16 MHz for CPU
-  
-  
-  
+
+  KEYS_Reload(&keys);
   while(1)
   {
-    
+    if(KEYS_Execute(&keys) != KEY_NO)
+    {
+      
+    }
   }
 }
 

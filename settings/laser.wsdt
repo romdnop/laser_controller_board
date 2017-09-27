@@ -61,32 +61,17 @@
       <Pane>
         <Tab>
           <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\stm8\doc\infocenter\index.ENU.html</Filename>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\User\src\main.c</Filename>
+          <Filename>$WS_DIR$\User\src\keys.c</Filename>
           <XPos>0</XPos>
           <YPos>0</YPos>
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>231</SelStart2>
-          <SelEnd2>231</SelEnd2>
+          <YPos2>42</YPos2>
+          <SelStart2>1690</SelStart2>
+          <SelEnd2>1690</SelEnd2>
         </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\User\inc\main.h</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>56</SelStart2>
-          <SelEnd2>56</SelEnd2>
-        </Tab>
+        <ActiveTab>0</ActiveTab>
         <Tab>
           <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\User\inc\keys.h</Filename>
@@ -96,8 +81,8 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>264</SelStart2>
-          <SelEnd2>264</SelEnd2>
+          <SelStart2>361</SelStart2>
+          <SelEnd2>361</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -108,81 +93,8 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>76</SelStart2>
-          <SelEnd2>76</SelEnd2>
-        </Tab>
-        <ActiveTab>4</ActiveTab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\User\src\keys.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>372</SelStart2>
-          <SelEnd2>372</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\StdPeriph\src\stm8s_gpio.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>172</YPos2>
-          <SelStart2>2904</SelStart2>
-          <SelEnd2>2913</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\StdPeriph\inc\stm8s_gpio.h</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>63</YPos2>
-          <SelStart2>2189</SelStart2>
-          <SelEnd2>2210</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\User\src\common.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>21</SelStart2>
-          <SelEnd2>21</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\User\inc\common.h</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>83</SelStart2>
-          <SelEnd2>83</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\StdPeriph\src\stm8s_clk.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>706</YPos2>
-          <SelStart2>21228</SelStart2>
-          <SelEnd2>21240</SelEnd2>
+          <SelStart2>451</SelStart2>
+          <SelEnd2>451</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -193,8 +105,32 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>89</SelStart2>
-          <SelEnd2>117</SelEnd2>
+          <SelStart2>144</SelStart2>
+          <SelEnd2>156</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\User\src\main.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>0</YPos2>
+          <SelStart2>342</SelStart2>
+          <SelEnd2>342</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\User\inc\main.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>0</YPos2>
+          <SelStart2>70</SelStart2>
+          <SelEnd2>70</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -205,8 +141,8 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>19</SelStart2>
-          <SelEnd2>19</SelEnd2>
+          <SelStart2>116</SelStart2>
+          <SelEnd2>116</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -217,8 +153,8 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>71</SelStart2>
-          <SelEnd2>71</SelEnd2>
+          <SelStart2>110</SelStart2>
+          <SelEnd2>131</SelEnd2>
         </Tab>
       </Pane>
       <ActivePane>0</ActivePane>

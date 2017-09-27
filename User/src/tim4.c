@@ -3,6 +3,8 @@
 
 
 volatile uint8_t timer_phase = 0;
+volatile uint8_t cycles_count = 0;
+
 void TIM4_Init(void)
 {
   TIM4_DeInit();
@@ -17,4 +19,5 @@ __interrupt void TIM4_IRQ_Handler(void)
 {
   //clear it flag
   timer_phase ^= 0xFF;
+  cycles_count++;
 }
