@@ -2064,6 +2064,9 @@
       <file>
         <name>$PROJ_DIR$\User\inc\main.h</name>
       </file>
+      <file>
+        <name>$PROJ_DIR$\User\inc\tim4.h</name>
+      </file>
     </group>
     <group>
       <name>src</name>
@@ -2072,6 +2075,9 @@
       </file>
       <file>
         <name>$PROJ_DIR$\User\src\main.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\User\src\tim4.c</name>
       </file>
     </group>
   </group>
