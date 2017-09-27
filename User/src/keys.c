@@ -28,13 +28,15 @@ KEY_Code KEYS_CheckPress(void)
 
 void KEYS_DeInit(KEY_TypeDefStruct *keysStruct)
 {
-  keysStruct->code = KEY_NO;
+  keysStruct->localFirstCode = KEY_NO;
+  keysStruct->localSecondCode = KEY_NO;
+  keysStruct->globalLastCode = KEY_NO;
+  
   keysStruct->state = IDLE;
   keysStruct->pauseCycles = &cycles_count;
   *keysStruct->pauseCycles = 0;
-  //keysStruct->lastCyclesCount = 0;
-  keysStruct->lastPressedCode = KEY_NO;
-  keysStruct->pressCount = 0;
+
+  keysStruct->globalPressCount = 0;
 }
 
 
@@ -60,27 +62,39 @@ KEY_Code KEYS_Execute(KEY_TypeDefStruct *keysStruct)
   switch(keysStruct->state)
   {
     case START:
-      keysStruct->code = KEYS_CheckPress();
-      if(keysStruct->code != KEY_NO)
+      if(keysStruct->globalPressCount > 2)
       {
-        keysStruct->state++;
-        *keysStruct->pauseCycles = 0;
-        return KEY_NO;
+        keysStruct->globalPressCount = 0;
       }
+      keysStruct->state++;
     case FIRST_CHECK:
-      if( *keysStruct->pauseCycles < 3)
+      keysStruct->localFirstCode = KEYS_CheckPress();
+      if(keysStruct->localFirstCode != KEY_NO)
       {
-        return KEY_NO;
-      }
-      keysStruct->code = KEYS_CheckPress();
-      if(keysStruct->code != KEY_NO)
-      {
+        *keysStruct->pauseCycles = 0;
         keysStruct->state++;
       }
+      return KEY_NO;
     case SECOND_CHECK:
-    
+      keysStruct->localSecondCode = KEYS_CheckPress();
+      if(*keysStruct->pauseCycles > 3)
+      {
+        if(keysStruct->localSecondCode == keysStruct->localFirstCode)
+        {
+          if(keysStruct->globalLastCode == keysStruct->localSecondCode)
+          {
+            keysStruct->globalPressCount++;
+          }
+          keysStruct->globalLastCode = keysStruct->localSecondCode;
+          keysStruct->state++;
+        }
+        keysStruct->localFirstCode = KEY_NO;
+        keysStruct->localSecondCode = KEY_NO;
+        keysStruct->state = START; //need prepare after local reset
+      }
+      return KEY_NO;
     case EXIT:
-      return keysStruct->code;
+      return keysStruct->globalLastCode;
   }
   return KEY_NO;
 }

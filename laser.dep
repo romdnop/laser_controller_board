@@ -708,11 +708,15 @@
           <name>BICOMP</name>
           <file> 108</file>
         </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 109</file>
+        </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 63 2 0 9 67 74 1 65 69 72 75 91 15 62 64 66 68 70 71 73 76 107</file>
+          <file> 0 9 74 67 63 2 1 65 69 72 75 91 15 62 64 66 68 70 71 73 76 107</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>

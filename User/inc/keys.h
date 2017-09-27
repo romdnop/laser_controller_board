@@ -30,12 +30,13 @@ typedef enum
 
 typedef struct
 {
-  KEY_Code code;
-  KEY_Code lastPressedCode;
-  uint8_t pressCount;
+  KEY_Code localFirstCode;
+  KEY_Code localSecondCode;
+  KEY_Code globalLastCode;
+  uint8_t globalPressCount;
+
   KEY_StatesStruct state;
   volatile uint8_t *pauseCycles;
-  //uint8_t lastCyclesCount;
 }KEY_TypeDefStruct;
 
 void KEYS_Init(void);
