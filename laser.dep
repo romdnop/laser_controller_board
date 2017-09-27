@@ -2,7 +2,7 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>1476748721</fileChecksum>
+  <fileChecksum>1097520693</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
@@ -116,7 +116,11 @@
       <file>$PROJ_DIR$\User\inc\keys.h</file>
       <file>$PROJ_DIR$\Debug\Obj\keys.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\keys.o</file>
+      <file>$PROJ_DIR$\User\inc\common.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\common.o</file>
+      <file>$PROJ_DIR$\User\src\common.c</file>
       <file>$PROJ_DIR$\User\src\keys.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\common.pbi</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
@@ -138,7 +142,7 @@
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 29 22 109 3 49 51 50 52 48 53 56 54 100 99 55 105 104 57 103 4 106 58 28 30</file>
+          <file> 29 111 22 109 3 49 51 50 52 48 53 56 54 100 99 55 105 104 57 103 4 106 58 28 30</file>
         </tool>
       </inputs>
     </file>
@@ -608,19 +612,15 @@
           <name>BICOMP</name>
           <file> 21</file>
         </tool>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 22</file>
-        </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 64 71 0 68 15 62 66 70 73 76 9 1 63 65 67 69 2 72 74 75 80</file>
+          <file> 63 2 0 9 67 74 1 65 69 72 75 91 15 62 64 66 68 70 71 73 76 80</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 80 0 15 1 62 63 64 65 66 67 68 69 70 2 71 72 73 74 75 76 9</file>
+          <file> 80 0 15 1 62 63 64 65 66 67 68 69 70 2 71 72 73 74 75 76 9 91</file>
         </tool>
       </inputs>
     </file>
@@ -658,10 +658,6 @@
           <name>BICOMP</name>
           <file> 59</file>
         </tool>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 58</file>
-        </tool>
       </outputs>
       <inputs>
         <tool>
@@ -671,6 +667,29 @@
         <tool>
           <name>ICCSTM8</name>
           <file> 91 0 15 1 62 63 64 65 66 67 68 69 70 2 71 72 73 74 75 76 9</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\User\src\common.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 114</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 111</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 63 2 0 9 67 74 1 65 69 72 75 15 62 64 66 68 70 71 73 76 110</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 110 0 15 1 62 63 64 65 66 67 68 69 70 2 71 72 73 74 75 76 9</file>
         </tool>
       </inputs>
     </file>
@@ -686,6 +705,16 @@
           <file> 109</file>
         </tool>
       </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1 0 75 69 65 72 9 63 67 2 74 15 62 64 66 68 70 71 73 76 107</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 107 0 15 1 62 63 64 65 66 67 68 69 70 2 71 72 73 74 75 76 9</file>
+        </tool>
+      </inputs>
     </file>
   </configuration>
   <configuration>

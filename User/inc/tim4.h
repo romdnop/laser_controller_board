@@ -3,5 +3,6 @@
 #include "stm8s.h"
 
 #define TIMER_PERIOD 128
+extern volatile uint8_t timer_phase;
 
 #endif
