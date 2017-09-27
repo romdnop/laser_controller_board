@@ -1714,6 +1714,9 @@
         <name>$PROJ_DIR$\User\inc\gpio.h</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\User\inc\keys.h</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\User\inc\main.h</name>
       </file>
       <file>
@@ -1724,6 +1727,9 @@
       <name>src</name>
       <file>
         <name>$PROJ_DIR$\User\src\gpio.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\User\src\keys.c</name>
       </file>
       <file>
         <name>$PROJ_DIR$\User\src\main.c</name>
