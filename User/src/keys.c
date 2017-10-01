@@ -98,3 +98,45 @@ KEY_Code KEYS_Execute(KEY_TypeDefStruct *keysStruct)
   }
   return KEY_NO;
 }
+
+
+
+uint8_t KEYS_Proceed(KEY_TypeDefStruct *keysStruct)
+{
+  if(keysStruct->globalLastCode == KEY_V)
+  {
+    switch(keysStruct->globalPressCount)
+    {
+      case 1:
+        //
+        KEYS_Reload(keysStruct);
+        return 1;
+      case 2:
+        //
+        KEYS_Reload(keysStruct);
+        return 1;
+      default:
+        KEYS_Reload(keysStruct);
+        return 0;
+    }
+  }
+  if(keysStruct->globalLastCode == KEY_H)
+  {
+    switch(keysStruct->globalPressCount)
+    {
+      case 1:
+        //
+        KEYS_Reload(keysStruct);
+        return 1;
+      case 2:
+        //
+        KEYS_Reload(keysStruct);
+        return 1;
+      default:
+        KEYS_Reload(keysStruct);
+        return 0;
+    }
+  }
+  KEYS_Reload(keysStruct);
+  return 0;
+}

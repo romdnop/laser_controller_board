@@ -1711,6 +1711,9 @@
     <group>
       <name>inc</name>
       <file>
+        <name>$PROJ_DIR$\User\inc\beep.h</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\User\inc\common.h</name>
       </file>
       <file>
@@ -1728,6 +1731,9 @@
     </group>
     <group>
       <name>src</name>
+      <file>
+        <name>$PROJ_DIR$\User\src\beep.c</name>
+      </file>
       <file>
         <name>$PROJ_DIR$\User\src\common.c</name>
       </file>
