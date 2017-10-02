@@ -9,6 +9,8 @@ int main(void)
 
   CLK_SYSCLKConfig(CLK_PRESCALER_CPUDIV1);
   CLK_SYSCLKConfig(CLK_PRESCALER_HSIDIV1); // set 16 MHz for CPU
+  
+  TIM2_init();
 
   KEYS_Reload(&keys);
   while(1)

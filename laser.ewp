@@ -1726,6 +1726,9 @@
         <name>$PROJ_DIR$\User\inc\main.h</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\User\inc\tim2.h</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\User\inc\tim4.h</name>
       </file>
     </group>
@@ -1745,6 +1748,9 @@
       </file>
       <file>
         <name>$PROJ_DIR$\User\src\main.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\User\src\tim2.c</name>
       </file>
       <file>
         <name>$PROJ_DIR$\User\src\tim4.c</name>
