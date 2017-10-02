@@ -146,7 +146,7 @@
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 60 37 52 36 93 15 17 16 18 14 19 22 20 27 29 21 33 32 23 31 91 34 24 59 61</file>
+          <file> 60 116 37 52 36 93 15 17 16 18 14 19 22 20 27 29 21 33 32 23 31 91 34 24 59 61</file>
         </tool>
       </inputs>
     </file>
@@ -740,11 +740,13 @@
           <file> 116</file>
         </tool>
       </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 115 0 46 1 106 107 108 109 110 111 112 113 114 2 96 97 98 99 100 101 94</file>
+        </tool>
+      </inputs>
     </file>
-    <forcedrebuild>
-      <name>[MULTI_TOOL]</name>
-      <tool>ILINK</tool>
-    </forcedrebuild>
   </configuration>
   <configuration>
     <name>Release</name>
