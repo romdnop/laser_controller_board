@@ -5,5 +5,5 @@
 #include "keys.h"
 #include "tim2.h"
 #include "gpio.h"
-
+#include "beep.h"
 #endif

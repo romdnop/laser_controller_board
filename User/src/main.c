@@ -1,6 +1,7 @@
 #include "main.h"
 
 KEY_TypeDefStruct keys;
+Beep_StructTypeDef beep;
 
 int main(void)
 {
@@ -11,15 +12,25 @@ int main(void)
   CLK_SYSCLKConfig(CLK_PRESCALER_HSIDIV1); // set 16 MHz for CPU
   
   TIM2_init();
-
+  
+  
+  BEEP_StartShortBeep(&beep);
+  //TIM2_Stop();
+  //TIM2_Start();
+  
+  
+  
+  
   KEYS_Reload(&keys);
+  
+  __enable_interrupt();
   while(1)
   {
     if(KEYS_Execute(&keys) != KEY_NO)
     {
       
     }
-    //BEEP_Execute(&beep);
+    BEEP_Execute(&beep);
   }
 }
 
