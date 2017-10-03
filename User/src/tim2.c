@@ -44,6 +44,11 @@ void TIM2_Start(void)
 }
 
 
+void TIM2_Toggle(void)
+{
+  TIM2->CCER1 ^= TIM2_CCER1_CC1E;
+}
+
 #pragma vector=0x10
 __interrupt void  TIM2_CaptureIRqHandler(void)
 {

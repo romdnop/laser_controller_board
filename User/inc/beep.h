@@ -7,6 +7,7 @@
 typedef enum
 {
   BEEP_RUN,
+  BEEP_ZUMMING,
   BEEP_IDLE
 }BEEP_State;
 
@@ -14,6 +15,7 @@ typedef struct
 {
   uint16_t waiting_cycles;
   volatile uint16_t *cycles;
+  uint8_t zumPhase;
   BEEP_State state;
 }Beep_StructTypeDef;
 
