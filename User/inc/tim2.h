@@ -7,5 +7,7 @@ extern volatile uint16_t tim2_cycles_count;
 void TIM2_init(void);
 void TIM2_Stop(void);
 void TIM2_Start(void);
+void TIM2_Toggle(void);
+
 
 #endif
