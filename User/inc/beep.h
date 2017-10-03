@@ -21,6 +21,8 @@ typedef struct
 
 void BEEP_StartShortBeep(Beep_StructTypeDef *beep);
 void BEEP_StartLongBeep(Beep_StructTypeDef *beep);
+void BEEP_StartZumming(Beep_StructTypeDef *beep);
+void BEEP_StopZumming(Beep_StructTypeDef *beep);
 void BEEP_Execute(Beep_StructTypeDef *beep);
 
 #endif

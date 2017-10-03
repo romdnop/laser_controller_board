@@ -19,7 +19,7 @@ int main(void)
   //TIM2_Start();
   
   
-  
+  BEEP_StartZumming(&beep);
   
   KEYS_Reload(&keys);
   

@@ -10,9 +10,9 @@
     <Static>
       <Build>
         <ColumnWidth0>20</ColumnWidth0>
-        <ColumnWidth1>981</ColumnWidth1>
-        <ColumnWidth2>261</ColumnWidth2>
-        <ColumnWidth3>65</ColumnWidth3>
+        <ColumnWidth1>1396</ColumnWidth1>
+        <ColumnWidth2>372</ColumnWidth2>
+        <ColumnWidth3>93</ColumnWidth3>
       </Build>
       <Workspace>
         <ColumnWidths>
@@ -22,12 +22,13 @@
           <Column3>27</Column3>
         </ColumnWidths>
       </Workspace>
+      <TerminalIO/>
     </Static>
     <Windows>
       <Wnd0>
         <Tabs>
           <Tab>
-            <Identity>TabID-10036-22578</Identity>
+            <Identity>TabID-9353-3723</Identity>
             <TabName>Build</TabName>
             <Factory>Build</Factory>
             <Session/>
@@ -38,12 +39,13 @@
       <Wnd1>
         <Tabs>
           <Tab>
-            <Identity>TabID-20784-22581</Identity>
+            <Identity>TabID-20101-3726</Identity>
             <TabName>Workspace</TabName>
             <Factory>Workspace</Factory>
             <Session>
               <NodeDict>
                 <ExpandedNode>laser</ExpandedNode>
+                <ExpandedNode>laser/StdPeriph</ExpandedNode>
                 <ExpandedNode>laser/User</ExpandedNode>
                 <ExpandedNode>laser/User/inc</ExpandedNode>
                 <ExpandedNode>laser/User/src</ExpandedNode>
@@ -58,21 +60,19 @@
       <Pane>
         <Tab>
           <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\stm8\doc\infocenter\index.ENU.html</Filename>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\User\src\main.c</Filename>
           <XPos>0</XPos>
           <YPos>0</YPos>
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-<<<<<<< HEAD
           <YPos2>0</YPos2>
-          <SelStart2>388</SelStart2>
-          <SelEnd2>388</SelEnd2>
-=======
-          <YPos2>15</YPos2>
-          <SelStart2>550</SelStart2>
-          <SelEnd2>550</SelEnd2>
->>>>>>> 15c21d3102f0ca637097b780df7a5d478fbebf3f
+          <SelStart2>74</SelStart2>
+          <SelEnd2>74</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -82,11 +82,10 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>44</YPos2>
-          <SelStart2>1146</SelStart2>
-          <SelEnd2>1146</SelEnd2>
+          <YPos2>13</YPos2>
+          <SelStart2>864</SelStart2>
+          <SelEnd2>864</SelEnd2>
         </Tab>
-        <ActiveTab>1</ActiveTab>
         <Tab>
           <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\User\inc\beep.h</Filename>
@@ -96,8 +95,20 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>157</SelStart2>
-          <SelEnd2>157</SelEnd2>
+          <SelStart2>438</SelStart2>
+          <SelEnd2>438</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\User\src\keys.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>37</YPos2>
+          <SelStart2>1223</SelStart2>
+          <SelEnd2>1223</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -107,89 +118,11 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-<<<<<<< HEAD
-          <YPos2>3</YPos2>
-          <SelStart2>1023</SelStart2>
-          <SelEnd2>1033</SelEnd2>
+          <YPos2>7</YPos2>
+          <SelStart2>970</SelStart2>
+          <SelEnd2>970</SelEnd2>
         </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\StdPeriph\src\stm8s_tim2.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>382</YPos2>
-          <SelStart2>18490</SelStart2>
-          <SelEnd2>18490</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\StdPeriph\inc\stm8s_tim2.h</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>132</YPos2>
-          <SelStart2>3630</SelStart2>
-          <SelEnd2>3648</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\StdPeriph\inc\stm8s.h</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>2790</YPos2>
-          <SelStart2>116941</SelStart2>
-          <SelEnd2>116955</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\User\src\main.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>548</SelStart2>
-          <SelEnd2>548</SelEnd2>
-        </Tab>
-        <ActiveTab>7</ActiveTab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\User\inc\main.h</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>128</SelStart2>
-          <SelEnd2>128</SelEnd2>
-=======
-          <YPos2>35</YPos2>
-          <SelStart2>1086</SelStart2>
-          <SelEnd2>1108</SelEnd2>
->>>>>>> 15c21d3102f0ca637097b780df7a5d478fbebf3f
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\User\inc\tim2.h</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>200</SelStart2>
-          <SelEnd2>200</SelEnd2>
-        </Tab>
+        <ActiveTab>5</ActiveTab>
       </Pane>
       <ActivePane>0</ActivePane>
       <Sizes>
@@ -204,11 +137,17 @@
       <Top>
         <Row0>
           <Sizes>
-            <Toolbar-0031FB88>
+            <Toolbar-011EBED8>
               <key>iaridepm.enu1</key>
-            </Toolbar-0031FB88>
+            </Toolbar-011EBED8>
           </Sizes>
         </Row0>
+        <Row1>
+          <Sizes/>
+        </Row1>
+        <Row2>
+          <Sizes/>
+        </Row2>
       </Top>
       <Left>
         <Row0>
@@ -217,16 +156,16 @@
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
-                <Bottom>460</Bottom>
+                <Bottom>772</Bottom>
                 <Right>198</Right>
                 <x>-2</x>
                 <y>-2</y>
                 <xscreen>200</xscreen>
                 <yscreen>200</yscreen>
-                <sizeHorzCX>146413</sizeHorzCX>
-                <sizeHorzCY>284900</sizeHorzCY>
-                <sizeVertCX>146413</sizeVertCX>
-                <sizeVertCY>658120</sizeVertCY>
+                <sizeHorzCX>104167</sizeHorzCX>
+                <sizeHorzCY>197239</sizeHorzCY>
+                <sizeVertCX>104167</sizeVertCX>
+                <sizeVertCY>763314</sizeVertCY>
               </Rect>
             </Wnd1>
           </Sizes>
@@ -245,15 +184,15 @@
                 <Top>-2</Top>
                 <Left>-2</Left>
                 <Bottom>198</Bottom>
-                <Right>1368</Right>
+                <Right>1922</Right>
                 <x>-2</x>
                 <y>-2</y>
-                <xscreen>1370</xscreen>
+                <xscreen>1924</xscreen>
                 <yscreen>200</yscreen>
-                <sizeHorzCX>1002928</sizeHorzCX>
-                <sizeHorzCY>284900</sizeHorzCY>
-                <sizeVertCX>146413</sizeVertCX>
-                <sizeVertCY>284900</sizeVertCY>
+                <sizeHorzCX>1002083</sizeHorzCX>
+                <sizeHorzCY>197239</sizeHorzCY>
+                <sizeVertCX>104167</sizeVertCX>
+                <sizeVertCY>197239</sizeVertCY>
               </Rect>
             </Wnd0>
           </Sizes>

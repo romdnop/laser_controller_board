@@ -42,7 +42,7 @@ void BEEP_StopZumming(Beep_StructTypeDef *beep)
 
 void BEEP_Execute(Beep_StructTypeDef *beep)
 {
-  if(beep->state != BEEP_RUN)
+  if(beep->state == BEEP_IDLE)
   {
     return;
   }
