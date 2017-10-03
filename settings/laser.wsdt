@@ -16,7 +16,7 @@
       </Build>
       <Workspace>
         <ColumnWidths>
-          <Column0>124</Column0>
+          <Column0>198</Column0>
           <Column1>27</Column1>
           <Column2>27</Column2>
           <Column3>27</Column3>
@@ -25,27 +25,26 @@
       <TerminalIO/>
     </Static>
     <Windows>
-      <Wnd0>
+      <Wnd2>
         <Tabs>
           <Tab>
-            <Identity>TabID-9353-3723</Identity>
+            <Identity>TabID-20152-25814</Identity>
             <TabName>Build</TabName>
             <Factory>Build</Factory>
             <Session/>
           </Tab>
         </Tabs>
         <SelectedTab>0</SelectedTab>
-      </Wnd0>
-      <Wnd1>
+      </Wnd2>
+      <Wnd3>
         <Tabs>
           <Tab>
-            <Identity>TabID-20101-3726</Identity>
+            <Identity>TabID-30900-25817</Identity>
             <TabName>Workspace</TabName>
             <Factory>Workspace</Factory>
             <Session>
               <NodeDict>
                 <ExpandedNode>laser</ExpandedNode>
-                <ExpandedNode>laser/StdPeriph</ExpandedNode>
                 <ExpandedNode>laser/User</ExpandedNode>
                 <ExpandedNode>laser/User/inc</ExpandedNode>
                 <ExpandedNode>laser/User/src</ExpandedNode>
@@ -54,25 +53,21 @@
           </Tab>
         </Tabs>
         <SelectedTab>0</SelectedTab>
-      </Wnd1>
+      </Wnd3>
     </Windows>
     <Editor>
       <Pane>
         <Tab>
           <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\stm8\doc\infocenter\index.ENU.html</Filename>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\User\src\main.c</Filename>
+          <Filename>$WS_DIR$\User\src\gpio.c</Filename>
           <XPos>0</XPos>
           <YPos>0</YPos>
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>74</SelStart2>
-          <SelEnd2>74</SelEnd2>
+          <YPos2>22</YPos2>
+          <SelStart2>961</SelStart2>
+          <SelEnd2>961</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -82,21 +77,33 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>13</YPos2>
-          <SelStart2>864</SelStart2>
-          <SelEnd2>864</SelEnd2>
+          <YPos2>26</YPos2>
+          <SelStart2>837</SelStart2>
+          <SelEnd2>837</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\User\inc\beep.h</Filename>
+          <Filename>$WS_DIR$\User\src\tim4.c</Filename>
           <XPos>0</XPos>
           <YPos>0</YPos>
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>438</SelStart2>
-          <SelEnd2>438</SelEnd2>
+          <SelStart2>224</SelStart2>
+          <SelEnd2>224</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\User\inc\tim4.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>0</YPos2>
+          <SelStart2>83</SelStart2>
+          <SelEnd2>83</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -106,9 +113,94 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>37</YPos2>
-          <SelStart2>1223</SelStart2>
-          <SelEnd2>1223</SelEnd2>
+          <YPos2>0</YPos2>
+          <SelStart2>324</SelStart2>
+          <SelEnd2>324</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\User\inc\keys.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>21</YPos2>
+          <SelStart2>744</SelStart2>
+          <SelEnd2>744</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\User\src\main.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>46</YPos2>
+          <SelStart2>1518</SelStart2>
+          <SelEnd2>1518</SelEnd2>
+        </Tab>
+        <ActiveTab>6</ActiveTab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\User\inc\main.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>0</YPos2>
+          <SelStart2>167</SelStart2>
+          <SelEnd2>167</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\StdPeriph\src\stm8s_clk.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>54</YPos2>
+          <SelStart2>2673</SelStart2>
+          <SelEnd2>2673</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\User\inc\gpio.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>0</YPos2>
+          <SelStart2>248</SelStart2>
+          <SelEnd2>248</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\User\inc\tim2.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>0</YPos2>
+          <SelStart2>81</SelStart2>
+          <SelEnd2>98</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\User\src\common.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>0</YPos2>
+          <SelStart2>73</SelStart2>
+          <SelEnd2>73</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -118,11 +210,22 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>7</YPos2>
-          <SelStart2>970</SelStart2>
-          <SelEnd2>970</SelEnd2>
+          <YPos2>0</YPos2>
+          <SelStart2>23</SelStart2>
+          <SelEnd2>23</SelEnd2>
         </Tab>
-        <ActiveTab>5</ActiveTab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\User\inc\common.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>0</YPos2>
+          <SelStart2>75</SelStart2>
+          <SelEnd2>75</SelEnd2>
+        </Tab>
       </Pane>
       <ActivePane>0</ActivePane>
       <Sizes>
@@ -137,9 +240,9 @@
       <Top>
         <Row0>
           <Sizes>
-            <Toolbar-011EBED8>
+            <Toolbar-002DC188>
               <key>iaridepm.enu1</key>
-            </Toolbar-011EBED8>
+            </Toolbar-002DC188>
           </Sizes>
         </Row0>
         <Row1>
@@ -152,22 +255,22 @@
       <Left>
         <Row0>
           <Sizes>
-            <Wnd1>
+            <Wnd3>
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
                 <Bottom>772</Bottom>
-                <Right>198</Right>
+                <Right>272</Right>
                 <x>-2</x>
                 <y>-2</y>
                 <xscreen>200</xscreen>
                 <yscreen>200</yscreen>
                 <sizeHorzCX>104167</sizeHorzCX>
                 <sizeHorzCY>197239</sizeHorzCY>
-                <sizeVertCX>104167</sizeVertCX>
+                <sizeVertCX>142708</sizeVertCX>
                 <sizeVertCY>763314</sizeVertCY>
               </Rect>
-            </Wnd1>
+            </Wnd3>
           </Sizes>
         </Row0>
       </Left>
@@ -179,7 +282,7 @@
       <Bottom>
         <Row0>
           <Sizes>
-            <Wnd0>
+            <Wnd2>
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
@@ -194,7 +297,7 @@
                 <sizeVertCX>104167</sizeVertCX>
                 <sizeVertCY>197239</sizeVertCY>
               </Rect>
-            </Wnd0>
+            </Wnd2>
           </Sizes>
         </Row0>
       </Bottom>

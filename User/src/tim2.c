@@ -1,5 +1,8 @@
 #include "tim2.h"
 
+//timer for BUZZER
+
+
 volatile uint16_t tim2_cycles_count = 0;
 
 void TIM2_init(void)

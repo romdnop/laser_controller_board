@@ -3,6 +3,6 @@
 #include "stm8s.h"
 
 
-void delay_ms(uint16_t ms);
+void delay_ms(uint8_t ms);
 
 #endif

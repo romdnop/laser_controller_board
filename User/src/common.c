@@ -1,10 +1,8 @@
 #include "common.h"
+#include "tim4.h"
 
-void delay_ms(uint16_t ms){
-    while(ms--){
-        uint16_t i;
-        for(i = 0; i < ms; i++){
-            nop();
-        }
-    }
+
+void delay_ms(uint8_t ms){
+  tim4_cycles_count = 0;
+  while(tim4_cycles_count < ms);
 }

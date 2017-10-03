@@ -39,6 +39,17 @@ typedef struct
   volatile uint8_t *pauseCycles;
 }KEY_TypeDefStruct;
 
+
+typedef struct
+{
+  KEY_Code lastCode;
+  KEY_Code currentCode;
+  KEY_Code tempCode;
+  uint8_t vPressCount;
+  uint8_t hPressCount;
+}KEY2_TypeDefStruct;
+
+
 void KEYS_Init(void);
 KEY_Code KEYS_CheckPress(void);
 
@@ -47,6 +58,10 @@ void KEYS_DeInit(KEY_TypeDefStruct *keysStruct);
 void KEYS_Start(KEY_TypeDefStruct *keysStruct);
 void KEYS_Reload(KEY_TypeDefStruct *keysStruct);
 KEY_Code KEYS_Execute(KEY_TypeDefStruct *keysStruct);
+
+
+void KEYS2_Reset(KEY2_TypeDefStruct *keys);
+void KEYS2_Proceed(KEY2_TypeDefStruct *keys, uint8_t *mask);
 
 
 #endif

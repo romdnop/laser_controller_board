@@ -4,6 +4,8 @@
 
 #include "keys.h"
 #include "tim2.h"
+#include "tim4.h"
 #include "gpio.h"
 #include "beep.h"
+#include "common.h"
 #endif

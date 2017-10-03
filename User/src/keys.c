@@ -1,5 +1,6 @@
 #include "keys.h"
 #include "tim4.h"
+#include "gpio.h"
 
 //Input, pull-up
 void KEYS_Init(void)
@@ -33,7 +34,7 @@ void KEYS_DeInit(KEY_TypeDefStruct *keysStruct)
   keysStruct->globalLastCode = KEY_NO;
   
   keysStruct->state = IDLE;
-  keysStruct->pauseCycles = &cycles_count;
+  keysStruct->pauseCycles = &tim4_cycles_count;
   *keysStruct->pauseCycles = 0;
 
   keysStruct->globalPressCount = 0;
@@ -42,7 +43,7 @@ void KEYS_DeInit(KEY_TypeDefStruct *keysStruct)
 
 void KEYS_Start(KEY_TypeDefStruct *keysStruct)
 {
-  keysStruct->state = IDLE;
+  keysStruct->state = START;
 }
 
 
@@ -94,6 +95,7 @@ KEY_Code KEYS_Execute(KEY_TypeDefStruct *keysStruct)
       }
       return KEY_NO;
     case EXIT:
+      GPIOC->ODR ^= GPIO_PIN_3;
       return keysStruct->globalLastCode;
   }
   return KEY_NO;
@@ -139,4 +141,124 @@ uint8_t KEYS_Proceed(KEY_TypeDefStruct *keysStruct)
   }
   KEYS_Reload(keysStruct);
   return 0;
+}
+
+
+void KEYS2_Reset(KEY2_TypeDefStruct *keys)
+{
+  keys->currentCode = KEY_NO;
+  keys->lastCode = KEY_NO;
+  keys->tempCode = KEY_NO;
+  keys->vPressCount = 0;
+  keys->hPressCount = 0;
+}
+
+
+void KEYS2_Proceed(KEY2_TypeDefStruct *keys, uint8_t *mask)
+{
+  /*
+  if((keys->currentCode == keys->lastCode)&&(keys->lastCode != KEY_NO))
+  {
+    keys->pressCount++;
+    if(keys->pressCount>2)
+    {
+      keys->pressCount = 0;
+    }
+  }
+  */
+  keys->lastCode = keys->currentCode;
+
+  //output proceed
+  if(keys->lastCode == KEY_V)
+  {
+    keys->vPressCount++;
+    if(keys->vPressCount>2)
+    {
+      keys->vPressCount=0;
+    }
+    
+    if(keys->vPressCount & 1)
+    {
+      *mask |= 1;
+    }
+    
+    if(keys->vPressCount & 2)
+    {
+      *mask |= 2;
+    }
+    if(!keys->vPressCount)
+    {
+      *mask &= ~3;
+    }
+    
+    /*
+    if(keys->pressCount & 1)
+    {
+      *mask |= 1;
+    }
+    if(keys->pressCount & 2)
+    {
+      *mask |= 2;
+    }
+    if(!keys->pressCount)
+    {
+      *mask &= ~3;
+    }
+    */
+  }
+  
+  
+  
+  if(keys->lastCode == KEY_H)
+  {
+    keys->hPressCount++;
+    if(keys->hPressCount>2)
+    {
+      keys->hPressCount=0;
+    }
+    
+    if(keys->hPressCount & 1)
+    {
+      *mask |= 4;
+    }
+    
+    if(keys->hPressCount & 2)
+    {
+      *mask |= 8;
+    }
+    if(!keys->hPressCount)
+    {
+      *mask &= ~12;
+    }
+    
+    /*
+    *mask |= 4;
+    if(keys->pressCount & 2)
+    {
+      *mask |= 8;
+    }
+    if(!keys->pressCount)
+    {
+      *mask &= ~12;
+    }
+    */
+    
+    //*mask = (*mask + 4)&0x0F;
+    
+    
+    /*
+    if(keys->pressCount & 1)
+    {
+      
+    }
+    if(keys->pressCount & 2)
+    {
+      *mask |= 8;
+    }
+    if(!keys->pressCount)
+    {
+      *mask &= ~12;
+    }
+    */
+  }
 }
