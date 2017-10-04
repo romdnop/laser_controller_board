@@ -151,21 +151,13 @@ void KEYS2_Reset(KEY2_TypeDefStruct *keys)
   keys->tempCode = KEY_NO;
   keys->vPressCount = 0;
   keys->hPressCount = 0;
+  //keys->state = CHECK1;
 }
+
 
 
 void KEYS2_Proceed(KEY2_TypeDefStruct *keys, uint8_t *mask)
 {
-  /*
-  if((keys->currentCode == keys->lastCode)&&(keys->lastCode != KEY_NO))
-  {
-    keys->pressCount++;
-    if(keys->pressCount>2)
-    {
-      keys->pressCount = 0;
-    }
-  }
-  */
   keys->lastCode = keys->currentCode;
 
   //output proceed
@@ -190,24 +182,7 @@ void KEYS2_Proceed(KEY2_TypeDefStruct *keys, uint8_t *mask)
     {
       *mask &= ~3;
     }
-    
-    /*
-    if(keys->pressCount & 1)
-    {
-      *mask |= 1;
-    }
-    if(keys->pressCount & 2)
-    {
-      *mask |= 2;
-    }
-    if(!keys->pressCount)
-    {
-      *mask &= ~3;
-    }
-    */
   }
-  
-  
   
   if(keys->lastCode == KEY_H)
   {
@@ -230,35 +205,44 @@ void KEYS2_Proceed(KEY2_TypeDefStruct *keys, uint8_t *mask)
     {
       *mask &= ~12;
     }
-    
-    /*
-    *mask |= 4;
-    if(keys->pressCount & 2)
-    {
-      *mask |= 8;
-    }
-    if(!keys->pressCount)
-    {
-      *mask &= ~12;
-    }
-    */
-    
-    //*mask = (*mask + 4)&0x0F;
-    
-    
-    /*
-    if(keys->pressCount & 1)
-    {
-      
-    }
-    if(keys->pressCount & 2)
-    {
-      *mask |= 8;
-    }
-    if(!keys->pressCount)
-    {
-      *mask &= ~12;
-    }
-    */
+
+  }
+}
+
+
+
+uint8_t KEYS2_Execute(KEY2_TypeDefStruct *keys)
+{
+
+  switch(keys->state)
+  {
+    case CHECK1:
+      keys->tempCode =  KEYS_CheckPress();
+      if(keys->tempCode != KEY_NO)
+      {
+        keys->state = TIMER_START;
+        return 0;
+      }
+      return 0;
+    case TIMER_START:
+      tim4_cycles_count = 0;
+      keys->state = TIMER_CHECK;
+      return 0;
+    case TIMER_CHECK:
+      if(tim4_cycles_count > 80)
+      {
+        keys->currentCode = KEYS_CheckPress();
+        if((keys->currentCode == keys->tempCode)&&(keys->currentCode!=KEY_NO))
+        {
+          keys->state = KEYS_EXIT;
+          return 0;
+        }
+        keys->state = CHECK1;
+      }
+      return 0;
+    case KEYS_EXIT:
+      return 1;
+    default:
+      return 0;
   }
 }

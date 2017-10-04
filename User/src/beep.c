@@ -7,6 +7,7 @@ void BEEP_StartShortBeep(Beep_StructTypeDef *beep)
   *beep->cycles = 0;
   beep->zumPhase = 0;
   beep->state = BEEP_RUN;
+  beep->lastState = BEEP_RUN;
   TIM2_Start();
 }
 
@@ -18,6 +19,7 @@ void BEEP_StartLongBeep(Beep_StructTypeDef *beep)
   *beep->cycles = 0;
   beep->zumPhase = 0;
   beep->state = BEEP_RUN;
+  beep->lastState = BEEP_RUN;
   TIM2_Start();
 }
 
@@ -29,14 +31,14 @@ void BEEP_StartZumming(Beep_StructTypeDef *beep)
   beep->waiting_cycles = 200;
   beep->cycles = &tim2_cycles_count;
   *beep->cycles = 0;
-  //TIM2_Start();
+  TIM2_Start();
 }
 
 
 void BEEP_StopZumming(Beep_StructTypeDef *beep)
 {
-  beep->state = BEEP_IDLE;
-  TIM2_Stop();
+  beep->state = beep->lastState;
+  //TIM2_Stop();
 }
 
 

@@ -40,6 +40,15 @@ typedef struct
 }KEY_TypeDefStruct;
 
 
+
+typedef enum
+{
+  CHECK1,
+  TIMER_START,
+  TIMER_CHECK,
+  KEYS_EXIT 
+}KEYS2_StatesTypeDef;
+
 typedef struct
 {
   KEY_Code lastCode;
@@ -47,6 +56,7 @@ typedef struct
   KEY_Code tempCode;
   uint8_t vPressCount;
   uint8_t hPressCount;
+  KEYS2_StatesTypeDef state;
 }KEY2_TypeDefStruct;
 
 
@@ -62,6 +72,6 @@ KEY_Code KEYS_Execute(KEY_TypeDefStruct *keysStruct);
 
 void KEYS2_Reset(KEY2_TypeDefStruct *keys);
 void KEYS2_Proceed(KEY2_TypeDefStruct *keys, uint8_t *mask);
-
+uint8_t KEYS2_Execute(KEY2_TypeDefStruct *keys);
 
 #endif

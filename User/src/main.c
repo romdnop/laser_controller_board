@@ -12,8 +12,8 @@ int main(void)
   CLK_SYSCLKConfig(CLK_PRESCALER_HSIDIV1); // set 16 MHz for CPU
   
   TIM2_init();
-  TIM4_Init();
-  
+  TIM4_init();
+  TIM1_init();
   
   HW_GPIO_Init();
   BEEP_StartShortBeep(&beep);
@@ -21,25 +21,28 @@ int main(void)
   //TIM2_Start();
   
   
-  BEEP_StartZumming(&beep);
+  //BEEP_StartZumming(&beep);
   
   KEYS_Reload(&keys);
   KEYS2_Reset(&keys2);
   //OUT_PORT->ODR |= OUT1_PIN;
+  
+  /* Define FLASH programming time */
+  FLASH_SetProgrammingTime(FLASH_PROGRAMTIME_STANDARD);
+
+  /* Unlock Data memory */
+  FLASH_Unlock(FLASH_MEMTYPE_DATA);
+  saved_led_map = FLASH_ReadByte(eeprom_address);
+  
+  BEEP_StartLongBeep(&beep);
   __enable_interrupt();
   while(1)
   {
-    //if(KEYS_Execute(&keys) != KEY_NO)
-    //{
-    //  
-    //}
-    
-    
-    
+    /*
     keys2.tempCode =  KEYS_CheckPress();
     if(keys2.tempCode != KEY_NO)
     {
-      delay_ms(120);
+      delay_ms(80);
       keys2.currentCode = KEYS_CheckPress();
       if((keys2.currentCode == keys2.tempCode)&&(keys2.currentCode!=KEY_NO))
       {
@@ -48,36 +51,37 @@ int main(void)
         KEYS2_Proceed(&keys2, &saved_led_map);
         BEEP_StartShortBeep(&beep);
         //lock eeprom
-        
-        
-        
-        
-        /*
-        if(keys2.currentCode == keys2.lastCode)
-        {
-          keys2.pressCount++;
-        }
-        else
-        {
-          keys2.lastCode = keys2.currentCode;
-        }
-        if(keys2.pressCount>2)
-        {
-          KEYS2_Reset(&keys2);
-        }
-        GPIOC->ODR ^= GPIO_PIN_3;
-        */
+        //FLASH_Unlock(FLASH_MEMTYPE_DATA);
+        //FLASH_ProgramByte(eeprom_address, saved_led_map);
+        //FLASH_Lock(FLASH_MEMTYPE_DATA);
       }
     }
-    HW_GPIO_Set(saved_led_map);
-    
-    //modulation_funtion
-    //need setup tim1 on 8ms period 50% duty
+    */
     
     
+    if(KEYS2_Execute(&keys2))
+    {
+      KEYS2_Proceed(&keys2, &saved_led_map);
+      BEEP_StartShortBeep(&beep);
+      //KEYS2_Reset(&keys2);
+      
+      FLASH_Unlock(FLASH_MEMTYPE_DATA);
+      FLASH_ProgramByte(eeprom_address, saved_led_map);
+      FLASH_Lock(FLASH_MEMTYPE_DATA);
+      
+      keys2.state = CHECK1;
+    }
+    
+    HW_GPIO_Set(saved_led_map, tim1_mask);
+    
+    if(!(HEELING_PORT->IDR & HEELING_PIN))
+    {
+      BEEP_StartZumming(&beep);
+    }
+    else{
+      BEEP_StopZumming(&beep);
+    }
 
-    //delay_ms(0xFFFF);
-    //  GPIOC->ODR ^= GPIO_PIN_3;
     BEEP_Execute(&beep);
   }
 }

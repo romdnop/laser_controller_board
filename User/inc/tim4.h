@@ -7,6 +7,6 @@
 extern volatile uint8_t tim4_cycles_count;
 
 
-void TIM4_Init(void);
+void TIM4_init(void);
 
 #endif

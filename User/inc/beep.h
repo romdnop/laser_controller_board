@@ -17,6 +17,7 @@ typedef struct
   volatile uint16_t *cycles;
   uint8_t zumPhase;
   BEEP_State state;
+  BEEP_State lastState;
 }Beep_StructTypeDef;
 
 void BEEP_StartShortBeep(Beep_StructTypeDef *beep);

@@ -12,9 +12,16 @@
 #define BUZER_PORT      GPIOC
 #define BUZER_PIN       GPIO_PIN_5
 
+#define HEELING_PORT    GPIOD
+#define HEELING_PIN     GPIO_PIN_4
+
+
+
+#define LED_PORT        GPIOD
+#define LED_PIN         GPIO_PIN_5
 
 void HW_GPIO_Init(void);
-void HW_GPIO_Set(uint8_t map);
+void HW_GPIO_Set(uint8_t map,uint8_t mask);
 
 extern uint8_t saved_led_map;
 

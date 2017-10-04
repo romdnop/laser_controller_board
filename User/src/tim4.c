@@ -6,7 +6,7 @@
 //volatile uint8_t timer_phase = 0;
 volatile uint8_t tim4_cycles_count = 0;
 
-void TIM4_Init(void)
+void TIM4_init(void)
 {
   TIM4_DeInit();
   TIM4_TimeBaseInit(TIM4_PRESCALER_128, TIMER_PERIOD);

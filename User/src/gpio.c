@@ -6,6 +6,7 @@ uint8_t saved_led_map = 0;
 void HW_GPIO_Init(void)
 {
   GPIO_DeInit(OUT_PORT);
+  GPIO_DeInit(HEELING_PORT);
   //GPIO_Init(OUT_PORT,output_pins,GPIO_MODE_OUT_PP_LOW_FAST);
   OUT_PORT->ODR = GPIO_ODR_RESET_VALUE; /* Reset Output Data Register */
   OUT_PORT->DDR = GPIO_DDR_RESET_VALUE; /* Reset Data Direction Register */
@@ -34,12 +35,22 @@ void HW_GPIO_Init(void)
   KEY_H_PORT->DDR &= ~KEY_H_PIN;
   KEY_H_PORT->CR1 |= KEY_H_PIN;
   KEY_H_PORT->CR2 &= ~KEY_H_PIN;
+  
+  HEELING_PORT->DDR &= ~HEELING_PIN;
+  HEELING_PORT->CR1 |= HEELING_PIN;
+  HEELING_PORT->CR2 &= ~HEELING_PIN;
+  
+  
+  LED_PORT->CR2 &= ~LED_PIN;
+  LED_PORT->ODR |= LED_PIN;
+  LED_PORT->DDR |= LED_PIN;
+  LED_PORT->CR1 |= LED_PIN;
 }
 
 
-void HW_GPIO_Set(uint8_t map)
+void HW_GPIO_Set(uint8_t map, uint8_t mask)
 {
-  if(map & 1)
+  if(map & 1 &mask)
   {
     OUT_PORT->ODR |= OUT1_PIN;
   }
@@ -48,7 +59,7 @@ void HW_GPIO_Set(uint8_t map)
     OUT_PORT->ODR &= ~OUT1_PIN;
   }
 
-  if(map & 2)
+  if(map & 2 & mask)
   {
     OUT_PORT->ODR |= OUT2_PIN;
   }
@@ -57,10 +68,9 @@ void HW_GPIO_Set(uint8_t map)
     OUT_PORT->ODR &= ~OUT2_PIN;
   }
   
-  if(map & 4)
+  if(map & 4 & mask)
   {
     OUT_PORT->ODR |= OUT3_PIN;
-    //GPIOC->ODR |= GPIO_PIN_3;
   }
   else
   {
@@ -68,7 +78,7 @@ void HW_GPIO_Set(uint8_t map)
   }
   
   
-  if(map & 8)
+  if(map & 8 & mask)
   {
     OUT_PORT->ODR |= OUT4_PIN;
   }
@@ -76,4 +86,11 @@ void HW_GPIO_Set(uint8_t map)
   {
     OUT_PORT->ODR &= ~OUT4_PIN;
   }
+}
+
+
+
+void HW_GPIO_CheckHeeling(void)
+{
+  
 }

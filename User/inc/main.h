@@ -3,9 +3,13 @@
 #include "stm8s.h"
 
 #include "keys.h"
+#include "tim1.h"
 #include "tim2.h"
 #include "tim4.h"
 #include "gpio.h"
 #include "beep.h"
 #include "common.h"
+
+
+#define eeprom_address (uint16_t)0x40A5
 #endif
