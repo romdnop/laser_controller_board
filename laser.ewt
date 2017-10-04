@@ -2065,6 +2065,9 @@
         <name>$PROJ_DIR$\User\inc\gpio.h</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\User\inc\heel.h</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\User\inc\keys.h</name>
       </file>
       <file>
@@ -2087,6 +2090,9 @@
       </file>
       <file>
         <name>$PROJ_DIR$\User\src\gpio.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\User\src\heel.c</name>
       </file>
       <file>
         <name>$PROJ_DIR$\User\src\keys.c</name>

@@ -16,7 +16,7 @@
       </Build>
       <Workspace>
         <ColumnWidths>
-          <Column0>219</Column0>
+          <Column0>203</Column0>
           <Column1>27</Column1>
           <Column2>27</Column2>
           <Column3>27</Column3>
@@ -128,8 +128,8 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>209</SelStart2>
-          <SelEnd2>209</SelEnd2>
+          <SelStart2>187</SelStart2>
+          <SelEnd2>187</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -163,10 +163,11 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>22</YPos2>
-          <SelStart2>696</SelStart2>
-          <SelEnd2>696</SelEnd2>
+          <YPos2>0</YPos2>
+          <SelStart2>672</SelStart2>
+          <SelEnd2>672</SelEnd2>
         </Tab>
+        <ActiveTab>8</ActiveTab>
         <Tab>
           <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\User\src\keys.c</Filename>
@@ -176,10 +177,9 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>87</YPos2>
-          <SelStart2>797</SelStart2>
-          <SelEnd2>797</SelEnd2>
+          <SelStart2>1733</SelStart2>
+          <SelEnd2>1733</SelEnd2>
         </Tab>
-        <ActiveTab>9</ActiveTab>
         <Tab>
           <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\User\inc\keys.h</Filename>
@@ -189,8 +189,8 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>345</SelStart2>
-          <SelEnd2>345</SelEnd2>
+          <SelStart2>299</SelStart2>
+          <SelEnd2>299</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -200,9 +200,9 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>25</YPos2>
-          <SelStart2>828</SelStart2>
-          <SelEnd2>828</SelEnd2>
+          <YPos2>22</YPos2>
+          <SelStart2>749</SelStart2>
+          <SelEnd2>765</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -213,8 +213,8 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>317</SelStart2>
-          <SelEnd2>317</SelEnd2>
+          <SelStart2>320</SelStart2>
+          <SelEnd2>338</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -263,6 +263,30 @@
           <YPos2>0</YPos2>
           <SelStart2>0</SelStart2>
           <SelEnd2>0</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\User\src\heel.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>0</YPos2>
+          <SelStart2>112</SelStart2>
+          <SelEnd2>112</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\User\inc\heel.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>0</YPos2>
+          <SelStart2>270</SelStart2>
+          <SelEnd2>270</SelEnd2>
         </Tab>
       </Pane>
       <ActivePane>0</ActivePane>

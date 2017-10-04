@@ -3,6 +3,8 @@
 
 Beep_StructTypeDef beep;
 KEY_TypeDefStruct keys;
+HEEL_StructTypeDef heel;
+
 int main(void)
 {
   // ---------- CLK CONFIG -----------------------
@@ -27,6 +29,7 @@ int main(void)
   FLASH_Unlock(FLASH_MEMTYPE_DATA);
   saved_led_map = FLASH_ReadByte(eeprom_address);
   
+  HEEL_Reset(&heel);
   BEEP_StartLongBeep(&beep);
   __enable_interrupt();
   while(1)
@@ -45,7 +48,10 @@ int main(void)
     
     HW_GPIO_Set(saved_led_map, tim1_mask);
     
+    HEEL_Execute(&heel, &beep);
+    
     //Check heeling
+    /*
     if(!(HEELING_PORT->IDR & HEELING_PIN))
     {
       BEEP_StartZumming(&beep);
@@ -53,7 +59,7 @@ int main(void)
     else{
       BEEP_StopZumming(&beep);
     }
-
+    */
     BEEP_Execute(&beep);
   }
 }
