@@ -1,5 +1,7 @@
 #include "tim1.h"
 
+//timer for 60Hz
+
 volatile uint8_t tim1_mask = 0;
 
 void TIM1_init(void)

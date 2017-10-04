@@ -8,8 +8,8 @@
 #include "tim4.h"
 #include "gpio.h"
 #include "beep.h"
-#include "common.h"
+
+#define eeprom_address (uint16_t)0x4000
 
 
-#define eeprom_address (uint16_t)0x40A5
 #endif

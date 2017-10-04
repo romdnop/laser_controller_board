@@ -1,8 +1,8 @@
 #include "main.h"
 
-KEY_TypeDefStruct keys;
+
 Beep_StructTypeDef beep;
-KEY2_TypeDefStruct keys2;
+KEY_TypeDefStruct keys;
 int main(void)
 {
   // ---------- CLK CONFIG -----------------------
@@ -17,15 +17,8 @@ int main(void)
   
   HW_GPIO_Init();
   BEEP_StartShortBeep(&beep);
-  //TIM2_Stop();
-  //TIM2_Start();
-  
-  
-  //BEEP_StartZumming(&beep);
-  
-  KEYS_Reload(&keys);
-  KEYS2_Reset(&keys2);
-  //OUT_PORT->ODR |= OUT1_PIN;
+
+  KEYS_Reset(&keys);
   
   /* Define FLASH programming time */
   FLASH_SetProgrammingTime(FLASH_PROGRAMTIME_STANDARD);
@@ -38,42 +31,21 @@ int main(void)
   __enable_interrupt();
   while(1)
   {
-    /*
-    keys2.tempCode =  KEYS_CheckPress();
-    if(keys2.tempCode != KEY_NO)
+    if(KEYS_Execute(&keys))
     {
-      delay_ms(80);
-      keys2.currentCode = KEYS_CheckPress();
-      if((keys2.currentCode == keys2.tempCode)&&(keys2.currentCode!=KEY_NO))
-      {
-        //unlock eeprom
-        //proceed
-        KEYS2_Proceed(&keys2, &saved_led_map);
-        BEEP_StartShortBeep(&beep);
-        //lock eeprom
-        //FLASH_Unlock(FLASH_MEMTYPE_DATA);
-        //FLASH_ProgramByte(eeprom_address, saved_led_map);
-        //FLASH_Lock(FLASH_MEMTYPE_DATA);
-      }
-    }
-    */
-    
-    
-    if(KEYS2_Execute(&keys2))
-    {
-      KEYS2_Proceed(&keys2, &saved_led_map);
+      KEYS_Proceed(&keys, &saved_led_map);
       BEEP_StartShortBeep(&beep);
-      //KEYS2_Reset(&keys2);
       
       FLASH_Unlock(FLASH_MEMTYPE_DATA);
       FLASH_ProgramByte(eeprom_address, saved_led_map);
       FLASH_Lock(FLASH_MEMTYPE_DATA);
       
-      keys2.state = CHECK1;
+      keys.state = KEYS_FIRST_CHECK;
     }
     
     HW_GPIO_Set(saved_led_map, tim1_mask);
     
+    //Check heeling
     if(!(HEELING_PORT->IDR & HEELING_PIN))
     {
       BEEP_StartZumming(&beep);

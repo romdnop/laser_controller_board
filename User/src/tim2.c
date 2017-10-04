@@ -7,9 +7,7 @@ volatile uint16_t tim2_cycles_count = 0;
 
 void TIM2_init(void)
 {
-
   TIM2_DeInit();
-  
 
   TIM2->PSCR = (uint8_t)(TIM2_PRESCALER_32);
   TIM2->ARRH = (uint8_t)(1250 >> 8);            //400Hz
@@ -22,16 +20,6 @@ void TIM2_init(void)
   TIM2->IER |= TIM2_IER_CC1IE;
   TIM2->CCER1 |= TIM2_CCER1_CC1E;
   TIM2->CR1 |= TIM2_CR1_CEN;
-  
-/*
-  TIM2_DeInit();
-  TIM2_TimeBaseInit(TIM2_PRESCALER_2, 1000);
-  //TIM2_OC2Init(TIM2_OCMODE_PWM1, TIM2_OUTPUTSTATE_ENABLE, 1, TIM2_OCPOLARITY_HIGH);
-  TIM2_OC1Init(TIM2_OCMODE_PWM1, TIM2_OUTPUTSTATE_ENABLE, 500, TIM2_OCPOLARITY_HIGH);
-  TIM2_Cmd(ENABLE);
-*/
-  
-  
 }
 
 

@@ -27,136 +27,19 @@ KEY_Code KEYS_CheckPress(void)
 }
 
 
-void KEYS_DeInit(KEY_TypeDefStruct *keysStruct)
-{
-  keysStruct->localFirstCode = KEY_NO;
-  keysStruct->localSecondCode = KEY_NO;
-  keysStruct->globalLastCode = KEY_NO;
-  
-  keysStruct->state = IDLE;
-  keysStruct->pauseCycles = &tim4_cycles_count;
-  *keysStruct->pauseCycles = 0;
 
-  keysStruct->globalPressCount = 0;
-}
-
-
-void KEYS_Start(KEY_TypeDefStruct *keysStruct)
-{
-  keysStruct->state = START;
-}
-
-
-void KEYS_Reload(KEY_TypeDefStruct *keysStruct)
-{
-  KEYS_DeInit(keysStruct);
-  KEYS_Start(keysStruct);
-}
-
-
-KEY_Code KEYS_Execute(KEY_TypeDefStruct *keysStruct)
-{
-  if(keysStruct->state == IDLE)
-  {
-    return KEY_NO;
-  }
-  switch(keysStruct->state)
-  {
-    case START:
-      if(keysStruct->globalPressCount > 2)
-      {
-        keysStruct->globalPressCount = 0;
-      }
-      keysStruct->state++;
-    case FIRST_CHECK:
-      keysStruct->localFirstCode = KEYS_CheckPress();
-      if(keysStruct->localFirstCode != KEY_NO)
-      {
-        *keysStruct->pauseCycles = 0;
-        keysStruct->state++;
-      }
-      return KEY_NO;
-    case SECOND_CHECK:
-      keysStruct->localSecondCode = KEYS_CheckPress();
-      if(*keysStruct->pauseCycles > 3)
-      {
-        if(keysStruct->localSecondCode == keysStruct->localFirstCode)
-        {
-          if(keysStruct->globalLastCode == keysStruct->localSecondCode)
-          {
-            keysStruct->globalPressCount++;
-          }
-          keysStruct->globalLastCode = keysStruct->localSecondCode;
-          keysStruct->state++;
-        }
-        keysStruct->localFirstCode = KEY_NO;
-        keysStruct->localSecondCode = KEY_NO;
-        keysStruct->state = START; //need prepare after local reset
-      }
-      return KEY_NO;
-    case EXIT:
-      GPIOC->ODR ^= GPIO_PIN_3;
-      return keysStruct->globalLastCode;
-  }
-  return KEY_NO;
-}
-
-
-
-uint8_t KEYS_Proceed(KEY_TypeDefStruct *keysStruct)
-{
-  if(keysStruct->globalLastCode == KEY_V)
-  {
-    switch(keysStruct->globalPressCount)
-    {
-      case 1:
-        //
-        KEYS_Reload(keysStruct);
-        return 1;
-      case 2:
-        //
-        KEYS_Reload(keysStruct);
-        return 1;
-      default:
-        KEYS_Reload(keysStruct);
-        return 0;
-    }
-  }
-  if(keysStruct->globalLastCode == KEY_H)
-  {
-    switch(keysStruct->globalPressCount)
-    {
-      case 1:
-        //
-        KEYS_Reload(keysStruct);
-        return 1;
-      case 2:
-        //
-        KEYS_Reload(keysStruct);
-        return 1;
-      default:
-        KEYS_Reload(keysStruct);
-        return 0;
-    }
-  }
-  KEYS_Reload(keysStruct);
-  return 0;
-}
-
-
-void KEYS2_Reset(KEY2_TypeDefStruct *keys)
+void KEYS_Reset(KEY_TypeDefStruct *keys)
 {
   keys->currentCode = KEY_NO;
   keys->lastCode = KEY_NO;
   keys->tempCode = KEY_NO;
   keys->vPressCount = 0;
   keys->hPressCount = 0;
-  //keys->state = CHECK1;
 }
 
 
 
-void KEYS2_Proceed(KEY2_TypeDefStruct *keys, uint8_t *mask)
+void KEYS_Proceed(KEY_TypeDefStruct *keys, uint8_t *mask)
 {
   keys->lastCode = keys->currentCode;
 
@@ -211,24 +94,24 @@ void KEYS2_Proceed(KEY2_TypeDefStruct *keys, uint8_t *mask)
 
 
 
-uint8_t KEYS2_Execute(KEY2_TypeDefStruct *keys)
+uint8_t KEYS_Execute(KEY_TypeDefStruct *keys)
 {
 
   switch(keys->state)
   {
-    case CHECK1:
+    case KEYS_FIRST_CHECK:
       keys->tempCode =  KEYS_CheckPress();
       if(keys->tempCode != KEY_NO)
       {
-        keys->state = TIMER_START;
+        keys->state = KEYS_TIMER_START;
         return 0;
       }
       return 0;
-    case TIMER_START:
+    case KEYS_TIMER_START:
       tim4_cycles_count = 0;
-      keys->state = TIMER_CHECK;
+      keys->state = KEYS_TIMER_CHECK;
       return 0;
-    case TIMER_CHECK:
+    case KEYS_TIMER_CHECK:
       if(tim4_cycles_count > 80)
       {
         keys->currentCode = KEYS_CheckPress();
@@ -237,7 +120,7 @@ uint8_t KEYS2_Execute(KEY2_TypeDefStruct *keys)
           keys->state = KEYS_EXIT;
           return 0;
         }
-        keys->state = CHECK1;
+        keys->state = KEYS_FIRST_CHECK;
       }
       return 0;
     case KEYS_EXIT:

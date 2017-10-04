@@ -16,7 +16,7 @@
       </Build>
       <Workspace>
         <ColumnWidths>
-          <Column0>203</Column0>
+          <Column0>219</Column0>
           <Column1>27</Column1>
           <Column2>27</Column2>
           <Column3>27</Column3>
@@ -80,8 +80,8 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>38</SelStart2>
-          <SelEnd2>47</SelEnd2>
+          <SelStart2>39</SelStart2>
+          <SelEnd2>39</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -104,32 +104,8 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>261</SelStart2>
-          <SelEnd2>261</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\StdPeriph\src\stm8s_tim1.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>966</YPos2>
-          <SelStart2>25737</SelStart2>
-          <SelEnd2>25751</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\StdPeriph\inc\stm8s_tim1.h</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>113</YPos2>
-          <SelStart2>4095</SelStart2>
-          <SelEnd2>4114</SelEnd2>
+          <SelStart2>39</SelStart2>
+          <SelEnd2>39</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -139,9 +115,9 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>6</YPos2>
-          <SelStart2>1103</SelStart2>
-          <SelEnd2>1103</SelEnd2>
+          <YPos2>9</YPos2>
+          <SelStart2>112</SelStart2>
+          <SelEnd2>112</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -152,8 +128,8 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>201</SelStart2>
-          <SelEnd2>215</SelEnd2>
+          <SelStart2>209</SelStart2>
+          <SelEnd2>209</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -163,9 +139,9 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>1724</SelStart2>
-          <SelEnd2>1724</SelEnd2>
+          <YPos2>45</YPos2>
+          <SelStart2>2020</SelStart2>
+          <SelEnd2>2020</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -187,9 +163,9 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>39</YPos2>
-          <SelStart2>1484</SelStart2>
-          <SelEnd2>1484</SelEnd2>
+          <YPos2>22</YPos2>
+          <SelStart2>696</SelStart2>
+          <SelEnd2>696</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -199,11 +175,11 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>204</YPos2>
-          <SelStart2>4722</SelStart2>
-          <SelEnd2>4722</SelEnd2>
+          <YPos2>87</YPos2>
+          <SelStart2>797</SelStart2>
+          <SelEnd2>797</SelEnd2>
         </Tab>
-        <ActiveTab>11</ActiveTab>
+        <ActiveTab>9</ActiveTab>
         <Tab>
           <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\User\inc\keys.h</Filename>
@@ -212,9 +188,9 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>32</YPos2>
-          <SelStart2>674</SelStart2>
-          <SelEnd2>683</SelEnd2>
+          <YPos2>0</YPos2>
+          <SelStart2>345</SelStart2>
+          <SelEnd2>345</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -224,9 +200,9 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>28</YPos2>
-          <SelStart2>1084</SelStart2>
-          <SelEnd2>1084</SelEnd2>
+          <YPos2>25</YPos2>
+          <SelStart2>828</SelStart2>
+          <SelEnd2>828</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -249,8 +225,8 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>141</SelStart2>
-          <SelEnd2>141</SelEnd2>
+          <SelStart2>40</SelStart2>
+          <SelEnd2>40</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -261,8 +237,8 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>141</SelStart2>
-          <SelEnd2>141</SelEnd2>
+          <SelStart2>62</SelStart2>
+          <SelEnd2>62</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -275,6 +251,18 @@
           <YPos2>162</YPos2>
           <SelStart2>4229</SelStart2>
           <SelEnd2>4347</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\User\inc\tim2.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>0</YPos2>
+          <SelStart2>0</SelStart2>
+          <SelEnd2>0</SelEnd2>
         </Tab>
       </Pane>
       <ActivePane>0</ActivePane>

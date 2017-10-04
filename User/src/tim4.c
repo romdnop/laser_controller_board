@@ -1,9 +1,6 @@
 #include "tim4.h"
 #include "stm8s.h"
 
-//timer for 60Hz
-
-//volatile uint8_t timer_phase = 0;
 volatile uint8_t tim4_cycles_count = 0;
 
 void TIM4_init(void)
@@ -22,7 +19,6 @@ __interrupt void TIM4_IRQ_Handler(void)
   if(TIM4->SR1 & TIM4_SR1_UIF)
   {
     TIM4->SR1 &= ~TIM4_SR1_UIF;
-    //timer_phase ^= 0xFF;
     tim4_cycles_count++;
   }
 }

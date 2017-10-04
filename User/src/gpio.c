@@ -7,7 +7,7 @@ void HW_GPIO_Init(void)
 {
   GPIO_DeInit(OUT_PORT);
   GPIO_DeInit(HEELING_PORT);
-  //GPIO_Init(OUT_PORT,output_pins,GPIO_MODE_OUT_PP_LOW_FAST);
+
   OUT_PORT->ODR = GPIO_ODR_RESET_VALUE; /* Reset Output Data Register */
   OUT_PORT->DDR = GPIO_DDR_RESET_VALUE; /* Reset Data Direction Register */
   OUT_PORT->CR1 = GPIO_CR1_RESET_VALUE; /* Reset Control Register 1 */
@@ -86,11 +86,4 @@ void HW_GPIO_Set(uint8_t map, uint8_t mask)
   {
     OUT_PORT->ODR &= ~OUT4_PIN;
   }
-}
-
-
-
-void HW_GPIO_CheckHeeling(void)
-{
-  
 }

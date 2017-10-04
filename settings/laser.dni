@@ -9,7 +9,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=-2066382325
+Checksum=271636420
 [CodeCoverage]
 Enabled=_ 0
 [DriverProfiling]
@@ -63,7 +63,7 @@ LogEnabled=0
 GraphEnabled=0
 ShowTimeLog=1
 [Breakpoints]
-Bp0=_ "STD_CODE" "{$PROJ_DIR$\User\src\main.c}.64.7" 1 0 0 0 "" 0 ""
+Bp0=_ "STD_CODE" "{$PROJ_DIR$\User\src\main.c}.37.7" 1 0 0 0 "" 0 ""
 Count=1
 [Log file]
 LoggingEnabled=_ 0
