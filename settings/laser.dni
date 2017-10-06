@@ -9,7 +9,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=271636420
+Checksum=-1849029584
 [CodeCoverage]
 Enabled=_ 0
 [DriverProfiling]
@@ -62,9 +62,6 @@ Fmt1={W}42:saved_led_map	1	0
 LogEnabled=0
 GraphEnabled=0
 ShowTimeLog=1
-[Breakpoints]
-Bp0=_ "STD_CODE" "{$PROJ_DIR$\User\src\main.c}.37.7" 1 0 0 0 "" 0 ""
-Count=1
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
@@ -72,6 +69,10 @@ Category=_ 0
 [TermIOLog]
 LoggingEnabled=_ 0
 LogFile=_ ""
+[Breakpoints]
+Bp0=_ "STD_CODE" "{$PROJ_DIR$\User\src\main.c}.39.7" 1 0 0 0 "" 0 ""
+Bp1=_ "STD_CODE" "{$PROJ_DIR$\User\src\heel.c}.14.9" 1 0 0 0 "" 0 ""
+Count=2
 [Aliases]
 Count=0
 SuppressDialog=0

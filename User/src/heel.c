@@ -11,7 +11,7 @@ uint8_t HEEL_Execute(HEEL_StructTypeDef *heel, Beep_StructTypeDef *beep)
   switch(heel->state)
   {
     case HEEL_IDLE:
-        if(!(HEELING_PORT->IDR & HEELING_PIN))
+        if((HEELING_PORT->IDR & HEELING_PIN))
         {
           heel->state = HEEL_START;
           return 0;
@@ -23,7 +23,7 @@ uint8_t HEEL_Execute(HEEL_StructTypeDef *heel, Beep_StructTypeDef *beep)
       heel->state = HEEL_WAIT;
       return 0;
     case HEEL_WAIT:
-      if((HEELING_PORT->IDR & HEELING_PIN))
+      if(!(HEELING_PORT->IDR & HEELING_PIN))
       {
         heel->state = HEEL_IDLE;
         //stop zumming
