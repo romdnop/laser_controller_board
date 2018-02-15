@@ -36,10 +36,25 @@ void HW_GPIO_Init(void)
   KEY_H_PORT->CR1 |= KEY_H_PIN;
   KEY_H_PORT->CR2 &= ~KEY_H_PIN;
   
-  
+  /*
   HEELING_PORT->DDR |= HEELING_PIN;
   HEELING_PORT->CR1 |= HEELING_PIN;
   HEELING_PORT->CR2 &= ~HEELING_PIN;
+  */
+  
+  /*
+  HEELING_PORT->CR2 &= (uint8_t)(~HEELING_PIN);
+  HEELING_PORT->ODR &= (uint8_t)(~HEELING_PIN);
+  HEELING_PORT->DDR |= (uint8_t)(HEELING_PIN);
+  HEELING_PORT->CR1 |= (uint8_t)(HEELING_PIN);
+  */
+  
+  //floating input
+
+  HEELING_PORT->DDR &= ~HEELING_PIN;
+  HEELING_PORT->CR1 &= ~HEELING_PIN;
+  HEELING_PORT->CR2 &= ~HEELING_PIN;
+
   
   
   LED_PORT->CR2 &= ~LED_PIN;

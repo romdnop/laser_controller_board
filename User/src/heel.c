@@ -16,6 +16,7 @@ uint8_t HEEL_Execute(HEEL_StructTypeDef *heel, Beep_StructTypeDef *beep)
           heel->state = HEEL_START;
           return 0;
         }
+        //BEEP_StopZumming(beep);
         return 0;
     case HEEL_START:
       //start zumming

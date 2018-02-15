@@ -49,17 +49,6 @@ int main(void)
     HW_GPIO_Set(saved_led_map, tim1_mask);
     
     HEEL_Execute(&heel, &beep);
-    
-    //Check heeling
-    /*
-    if(!(HEELING_PORT->IDR & HEELING_PIN))
-    {
-      BEEP_StartZumming(&beep);
-    }
-    else{
-      BEEP_StopZumming(&beep);
-    }
-    */
     BEEP_Execute(&beep);
   }
 }

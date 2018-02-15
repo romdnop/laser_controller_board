@@ -2,6 +2,7 @@
 #define _BEEP_H
 #include "stm8s.h"
 #include "tim2.h"
+#include "gpio.h"
 //Buzer use tim2 timer
 
 typedef enum

@@ -38,6 +38,8 @@ void BEEP_StartZumming(Beep_StructTypeDef *beep)
 void BEEP_StopZumming(Beep_StructTypeDef *beep)
 {
   beep->state = beep->lastState;
+  TIM2_Stop();
+  BUZER_PORT->ODR &= ~BUZER_PIN;
 }
 
 
