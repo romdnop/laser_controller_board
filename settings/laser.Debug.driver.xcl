@@ -4,11 +4,7 @@
 
 "-d" 
 
-"stlink" 
-
-"--mcuname" 
-
-"STM8S103F3P" 
+"sim" 
 
 
 

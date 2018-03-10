@@ -283,11 +283,11 @@
         </option>
         <option>
           <name>IccUseExtraOptions</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>IccExtraOptions</name>
-          <state></state>
+          <state> --no_path_in_file_macros</state>
         </option>
         <option>
           <name>IccLang</name>
@@ -484,15 +484,15 @@
         <option>
           <name>OOCOutputFormat</name>
           <version>2</version>
-          <state>0</state>
+          <state>2</state>
         </option>
         <option>
           <name>OCOutputOverride</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>OOCOutputFile</name>
-          <state></state>
+          <state>laser.bin</state>
         </option>
         <option>
           <name>OOCCommandLineProducer</name>
@@ -500,7 +500,7 @@
         </option>
         <option>
           <name>OOCObjCopyEnable</name>
-          <state>0</state>
+          <state>1</state>
         </option>
       </data>
     </settings>
@@ -547,7 +547,7 @@
         </option>
         <option>
           <name>IlinkOutputFile</name>
-          <state>lcd5110.out</state>
+          <state>$PROJ_FNAME$.out</state>
         </option>
         <option>
           <name>IlinkDebugInfoEnable</name>

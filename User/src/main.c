@@ -27,7 +27,7 @@ int main(void)
 
   /* Unlock Data memory */
   FLASH_Unlock(FLASH_MEMTYPE_DATA);
-  saved_led_map = FLASH_ReadByte(eeprom_address);
+  saved_led_map = FLASH_ReadByte(EEPROM_ADDRESS);
   
   HEEL_Reset(&heel);
   BEEP_StartLongBeep(&beep);
@@ -40,7 +40,7 @@ int main(void)
       BEEP_StartShortBeep(&beep);
       
       FLASH_Unlock(FLASH_MEMTYPE_DATA);
-      FLASH_ProgramByte(eeprom_address, saved_led_map);
+      FLASH_ProgramByte(EEPROM_ADDRESS, saved_led_map);
       FLASH_Lock(FLASH_MEMTYPE_DATA);
       
       keys.state = KEYS_FIRST_CHECK;

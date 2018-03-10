@@ -10,7 +10,7 @@
 #include "beep.h"
 #include "heel.h"
 
-#define eeprom_address (uint16_t)0x4000
+#define EEPROM_ADDRESS (uint16_t)0x4000
 
 
 #endif
